@@ -1,0 +1,8 @@
+fork remote repo
+clone MY REPO -> git clone https://github.com/your-username/original-repo.git
+git remote add upstream https://github.com/original-author/original-repo.git
+
+Update local fork to upstream:
+git fetch upstream
+git checkout main -> if not already to main
+git merge upstream/main
