@@ -1,3 +1,6 @@
+# ** Σημαντικό για το πως η python καταχωρεί τις λίστες. **
+
+
 # Initialize a list with mixed types, including a nested list
 my_list = [1, 2, "Hello", [3, 4, 5]]
 
@@ -5,11 +8,11 @@ my_list = [1, 2, "Hello", [3, 4, 5]]
 # This helps to understand which items are the same objects (sharing the same memory address)
 print("At the start:")
 for item in my_list:
-    print(f"{item} : {id(item)}")
+    print(f"{item} : {id(item)}") # id(value) -> το μέρος στο heap δείχνει το κάθε στοιχείο.
 
 # Create a new list by repeating the original list twice
 new_list = my_list * 2
-print("\nDuplicated list:", new_list)
+print("\nDuplicated list:", new_list) # Duplicated list: [1, 2, 'Hello', [3, 4, 5], 1, 2, 'Hello', [3, 4, 5]]
 print("---------------")
 
 # Modify the first element of the new list
@@ -18,7 +21,7 @@ print("\nModified first element of new_list:", new_list)
 print("---------------")
 
 # Modify an element within the nested list inside new_list
-# This shows how changes to mutable objects inside lists affect all references
+# This shows how changes to mutable objects inside lists affect all references NOTE modifing one nested list modifies the other as well since the are mutable and share the same reference.
 new_list[3][0] = 300
 print("\nModified nested list within new_list:", new_list)
 print("---------------")

@@ -13,10 +13,10 @@ def first(seq: Sequence[T]) -> T:
     If the sequence is empty, raises a ValueError.
 
     Args:
-    seq (Sequence[T]): The sequence from which to get the first element.
+      seq (Sequence[T]): The sequence from which to get the first element.
 
     Returns:
-    T: The first element of the sequence.
+      T: The first element of the sequence.
     """
     if not seq:
         raise ValueError("Sequence is empty")
@@ -29,10 +29,10 @@ def last(seq: Sequence[T]) -> T:
     If the sequence is empty, raises a ValueError.
 
     Args:
-    seq (Sequence[T]): The sequence from which to get the last element.
+      seq (Sequence[T]): The sequence from which to get the last element.
 
     Returns:
-    T: The last element of the sequence.
+      T: The last element of the sequence.
     """
     if not seq:
         raise ValueError("Sequence is empty")
@@ -44,10 +44,10 @@ def count_truthy(elements: List[Any]) -> int:
     Counts how many elements in the list are truthy.
 
     Args:
-    elements (List[Any]): A list of elements.
+      elements (List[Any]): A list of elements.
 
     Returns:
-    int: The count of truthy elements in the list.
+      int: The count of truthy elements in the list.
     """
     return sum(1 for element in elements if element)
 
@@ -57,10 +57,10 @@ def len_str(s: Optional[str] = None) -> int:
     Returns the length of a string. Returns 0 if the string is None.
 
     Args:
-    s (Optional[str]): The string or None.
+      s (Optional[str]): The string or None.
 
     Returns:
-    int: The length of the string, or 0 if None.
+      int: The length of the string, or 0 if None.
     """
     return len(s) if s is not None else 0
 
