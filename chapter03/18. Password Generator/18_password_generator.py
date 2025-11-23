@@ -3,6 +3,7 @@ import string
 import random
 
 # Create a list of characters that includes uppercase and lowercase letters, digits, and special characters
+# ASCII, digits, !@#$%^&*
 characters = list(string.ascii_letters + string.digits + " !@#$%^&*")
 
 def generate_password():

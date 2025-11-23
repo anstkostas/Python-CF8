@@ -3,10 +3,10 @@ def decrypt_message(message):
     Decrypts a message by removing all numeric characters.
 
     Args:
-    message (str): The encrypted message containing alphanumeric characters.
+      message (str): The encrypted message containing alphanumeric characters.
 
     Returns:
-    str: The decrypted message with numeric characters removed.
+      str: The decrypted message with numeric characters removed.
     """
     # Remove numeric characters using list comprehension and join
     # Spoiler... hehe

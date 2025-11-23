@@ -6,7 +6,7 @@ def main():
     # 1st way
     found = False
     for month in months:
-        if month.casefold() == input_month.casefold():
+        if month.casefold() == input_month.casefold():  # .casefold -> ignores casing
             found = True
             break
     

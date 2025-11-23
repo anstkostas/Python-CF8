@@ -3,9 +3,9 @@ def name_spacing(num: int):
     Prints each character of the given name separated by a specified number of spaces.
     
     Args:
-    num (int): The number of spaces to insert between each character.
+      num (int): The number of spaces to insert between each character.
     """
-    if not isinstance(num, int):
+    if not isinstance(num, int):  # Ελέγχω τον τύπο του num
         print("The number of spaces must be an integer.")
         return
 
@@ -13,7 +13,7 @@ def name_spacing(num: int):
         print("The number of spaces must be a non-negative integer.")
         return
 
-    name = input("Please give a name: ").strip()
+    name = input("Please give a name: ").strip()  # like .trim() of JavaScript
     
     if not name:
         print("No name provided.")

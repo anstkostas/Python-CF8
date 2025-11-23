@@ -3,10 +3,10 @@ def get_http_error(error_code):
     Returns the HTTP error message corresponding to the given error code.
     
     Args:
-    error_code (int): The HTTP error code.
+      error_code (int): The HTTP error code.
     
     Returns:
-    str: The corresponding error message.
+      str: The corresponding error message.
     """
     result = ''
     match error_code:

@@ -15,7 +15,7 @@ def calculate_sum_and_product(upper_bound):
         total_sum += i
         total_product *= i
     
-    return total_sum, total_product
+    return total_sum, total_product   # returns a tuple (somewhat similar to Dart's Records)
 
 def main():
     try:
