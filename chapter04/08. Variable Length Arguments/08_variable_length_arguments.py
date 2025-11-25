@@ -31,6 +31,7 @@ def my_avg(*args: int) -> float:
 def main():
     # List of ages to be averaged
     ages = [27, 35, 42, 18, 20]
+    # print("Average age:", my_avg(ages)) # TypeError: unsupported operand type(s) for +: 'int' and 'list'
     # Printing the average of a list of ages using unpacking argument lists
     print("Average age:", my_avg(*ages))
 
@@ -39,6 +40,7 @@ def main():
 
     # Example to demonstrate handling with no inputs
     print("Average with no inputs:", my_avg())  # Should return 0
+    print("Average age:", my_avg(*[]))  # Same as above
 
 if __name__ == "__main__":
     main()

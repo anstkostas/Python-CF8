@@ -16,6 +16,7 @@ def get_results(products: List[Tuple[str, int]], **kwargs: Optional[Dict[str, st
     """
     # Improved filtering to allow matching on one or more provided criteria
     results = [
+        # construct a tuple for each item in products, then check if their values are the same as the criteria(declared in get_results call in line 32).
         # [<expression> for <item> in <iterable> if <condition>]
         (brand, price) for brand, price in products if kwargs.get('brand') == brand and kwargs.get('price') == price
     ]
@@ -29,7 +30,7 @@ def main():
     criteria = {"brand": "lenovo", "price": 100}
 
     # Demonstration of the function
-    print(get_results(products, **criteria))
+    print(get_results(products, **criteria))  # Used (**) for dictionary unpacking bc (key: value) i.e. contains 2 elements
 
 if __name__ == "__main__":
     main()

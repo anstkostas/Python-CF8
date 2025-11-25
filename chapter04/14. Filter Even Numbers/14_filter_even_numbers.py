@@ -8,11 +8,11 @@ print(even_numbers_iterator)
 # print(*even_numbers_iterator)
 # print(*even_numbers_iterator)
 
-# Printing ven numbers
+# Printing even numbers
 for num in even_numbers_iterator:
     print(num, end=" ")
 
-# Printing ven numbers ???
+# Printing even numbers ???
 for num in even_numbers_iterator:
     print(num, end=" ")
 
