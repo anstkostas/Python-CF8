@@ -17,7 +17,7 @@ def department_id_generator(department):
         Returns:
         tuple: A tuple containing the unique ID as a string and the last_id as an integer.
         """
-        nonlocal last_id  # Declare last_id as nonlocal to modify it within the nested function
+        nonlocal last_id  # Declare last_id as nonlocal to modify it within the nested function, bc functions cannot modify immutable variables from parent scope without nonlocal. If this value was a list the use of nonlocal is optional.(see 21_memoize_fibonacci).
         last_id += 1  # Increment the last_id
         return f"{department}-{last_id}", last_id  # Return the formatted ID and last_id
     

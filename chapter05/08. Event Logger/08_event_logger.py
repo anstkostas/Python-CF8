@@ -1,5 +1,6 @@
 from datetime import datetime
 
+# Every python func which doesnt return anything explicit, in fact returns "None" implicitly.
 def log_event(event_type: str, **kwargs: dict) -> None:
     """
     Logs an event with a specified type and additional keyword arguments.

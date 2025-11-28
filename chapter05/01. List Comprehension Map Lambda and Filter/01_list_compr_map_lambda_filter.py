@@ -19,6 +19,8 @@ print(f"Squared numbers (map with lambda): {squared_map_lambda}")
 def square_function(num):
     return num ** 2
 
+squared_list_func = [square_function(num) for num in list_of_ints]
+print(f"Squared list func numbers: {squared_list_func}")
 # Printing the results using a list comprehension with a named function
 # The condition `if number == 100` will filter out all numbers since none are 100
 filtered_squared_func_results = [square_function(number) for number in list_of_ints if number == 100]

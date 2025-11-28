@@ -41,7 +41,7 @@ def main():
     print("-----------")
     
     test_args_func("Hello", "CF", # pos_arg1, pos_arg2
-                   100, 200, # opt_arg1, opt_arg2
+                   100, 200, # opt_arg1, opt_arg2 -> semanticly called optional since default to None
                    300, 400, # *args
                    kwargs1="Python", kwargs2="Android" # **kwargs
                    )

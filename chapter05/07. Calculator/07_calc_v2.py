@@ -1,4 +1,7 @@
+# Similar file to other 07, but instead of returning the functions as positional parameters it does as a dictionary, for easier access.
+
 import functools
+# or from functools import reduce
 
 def calculate(args: list[float]) -> dict:
     """

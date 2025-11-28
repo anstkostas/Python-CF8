@@ -1,5 +1,5 @@
 from collections import deque
-
+# For deque see other file
 def display_garage(garage: deque) -> None:
     """
     Displays the current state of the garage.
