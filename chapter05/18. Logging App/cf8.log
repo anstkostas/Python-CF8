@@ -1,0 +1,31 @@
+2025-11-25 20:15:08,233:ERROR:search-app:Item 'Frank' not found in the list. Error: list.index(x): x not in list
+Traceback (most recent call last):
+  File "C:\Users\akwst\Favorites\FOLDER\CodingFactory8\Python\python-cf8\chapter05\18. Logging App\18_logging_extra.py", line 89, in search_item
+    index = items.index(item_to_find)
+ValueError: list.index(x): x not in list
+2025-11-25 20:16:28,444:ERROR:search-app:Item 'Frank' not found in the list. Error: list.index(x): x not in list
+Traceback (most recent call last):
+  File "C:\Users\akwst\Favorites\FOLDER\CodingFactory8\Python\python-cf8\chapter05\18. Logging App\18_logging_extra.py", line 89, in search_item
+    index = items.index(item_to_find)
+ValueError: list.index(x): x not in list
+2025-11-25 20:18:18,938:ERROR:search-app:Item 'Frank' not found in the list. Error: list.index(x): x not in list
+Traceback (most recent call last):
+  File "C:\Users\akwst\Favorites\FOLDER\CodingFactory8\Python\python-cf8\chapter05\18. Logging App\18_logging_extra.py", line 89, in search_item
+    index = items.index(item_to_find)
+ValueError: list.index(x): x not in list
+2025-11-25 20:19:10,055:ERROR:search-app:Item 'Frank' not found in the list. Error: list.index(x): x not in list
+Traceback (most recent call last):
+  File "C:\Users\akwst\Favorites\FOLDER\CodingFactory8\Python\python-cf8\chapter05\18. Logging App\18_logging_extra.py", line 89, in search_item
+    index = items.index(item_to_find)
+ValueError: list.index(x): x not in list
+2025-11-25 20:19:57,916:INFO:search-app:Item 'Bob' found at index 1.
+2025-11-25 20:19:57,916:ERROR:search-app:Item 'Frank' not found in the list. Error: list.index(x): x not in list
+Traceback (most recent call last):
+  File "C:\Users\akwst\Favorites\FOLDER\CodingFactory8\Python\python-cf8\chapter05\18. Logging App\18_logging_extra.py", line 89, in search_item
+    index = items.index(item_to_find)
+ValueError: list.index(x): x not in list
+2025-11-25 20:20:19,710:ERROR:search-app:Item 'Frank' not found in the list. Error: list.index(x): x not in list
+Traceback (most recent call last):
+  File "C:\Users\akwst\Favorites\FOLDER\CodingFactory8\Python\python-cf8\chapter05\18. Logging App\18_logging_extra.py", line 89, in search_item
+    index = items.index(item_to_find)
+ValueError: list.index(x): x not in list

@@ -24,16 +24,24 @@ class MyTime:
             self.hours += 1
         
         # def display_time(self):
-        def __str__(self):
+    def __str__(self):
             # Display the time in HH:MM:SS format
             return f"{self.hours:02}:{self.minutes:02}:{self.seconds:02}"
 
-        def add_time(self, other):
+    def add_time(self, other):
             # Add time from another MyTime instance
             total_seconds = self.to_seconds() + other.to_seconds()
             result = MyTime()  # Create a new MyTime instance to store the result
             result.increment(total_seconds)
             return result
+  
+    # Homework: __add__
+    # time4 = time1 + time2
+    # print(f"Time7: {time7})
+    # This method is the one called when performing operations with + operator.
+    # Utilized the previously declared add_time().
+    def __add__(self, other):
+      return self.add_time(other)
 
 # Create two MyTime objects
 time1 = MyTime(1, 30, 45)
@@ -53,3 +61,6 @@ print("After adding time1 and time2 (using add_time):", time3)
 time4 = time1 + time2
 print("After adding time1 and time2 (using + operator):", time4)
 # Output: After adding time1 and time2 (using + operator): 04:17:25
+# NOTE
+# Prior to overloading __add__ you get:
+# TypeError: unsupported operand type(s) for +: 'MyTime' and 'MyTime'

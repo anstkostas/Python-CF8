@@ -48,6 +48,7 @@ def main():
 
     # Create a FactoIterator object to generate factorials up to 5
     facto_iter = FactoIterator(5)
+    # iterators are efficient structures, bc the calculations(the .next() call) happens for example in a for loop on the fly and not storred somewhere and then(at the end) retrieved.
 
     # Get the first factorial using the next() function
     a = next(facto_iter)

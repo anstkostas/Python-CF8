@@ -1,0 +1,10 @@
+2025-11-24 22:42:47,488:ERROR:search-app:Error occurred: list.index(x): x not in list
+Traceback (most recent call last):
+  File "C:\Users\akwst\Favorites\FOLDER\CodingFactory8\Python\Python-CF8\chapter05\18_logging_demo.py", line 15, in main
+    index = nums.index(num_to_find)
+ValueError: list.index(x): x not in list
+2025-11-24 22:43:47,877:ERROR:search-app:Error occurred: list.index(x): x not in list
+Traceback (most recent call last):
+  File "C:\Users\akwst\Favorites\FOLDER\CodingFactory8\Python\Python-CF8\chapter05\18_logging_demo.py", line 15, in main
+    index = nums.index(num_to_find)
+ValueError: list.index(x): x not in list

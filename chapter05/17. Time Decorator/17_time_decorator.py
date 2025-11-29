@@ -1,5 +1,6 @@
 import time
-
+# This function is called decorator bc adds (time) decorator logic to other functions.
+# See also 07_calc_v2.py
 def timer_decorator(func):
     """
     Decorator to measure the execution time of a function.
@@ -28,6 +29,7 @@ def timer_decorator(func):
         return result  # Return the result of the decorated function
     return inner_function
 
+# 1. First way to add a decorator
 # Decorate the sum_function manually
 def sum_function(n):
     """
@@ -42,9 +44,11 @@ def sum_function(n):
     return sum(range(n))
 
 # Decorate the sum_function manually
-sum_function = timer_decorator(sum_function)
+# I want them to have the same name, bc I want only the second function, the decorated(enhanced) with time logic.
+sum_function = timer_decorator(sum_function)  # old sum_function is overriden.
 print(sum_function(1_000_000))
 
+# 2. Second way to add a decorator
 # Decorate the sum_function_2 using the decorator syntax
 @timer_decorator
 def average_function(n):

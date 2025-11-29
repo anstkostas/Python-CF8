@@ -6,6 +6,7 @@ def main():
     grades = [7, 5, 9, 10, 3]
 
     # Map (Transforms the data of the list) using list comprehension
+    # NOTE In list comprehension if/else condition goes before for loop
     upscaled_grades = [grade + 1 if grade <= 9 else grade for grade in grades]
     print("Final grades (list comprehension):", upscaled_grades)
 
@@ -14,6 +15,7 @@ def main():
     print("Final grades (map()):", upscaled_grades2)
 
     # Filter using list comprehension
+    # NOTE In list comprehension if condition goes after for loop
     passed_grades = [grade for grade in grades if grade >= 5]
     print("Passed (list comprehension):", passed_grades)
 

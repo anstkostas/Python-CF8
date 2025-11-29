@@ -1,5 +1,8 @@
 def main():
     """
+    Here illustrates the use of min function using the key function as the second parameter.
+    This key function determines how comparison is done.
+    The default use with a list of numbers returns the smallest.
     Main function to demonstrate finding the key with the minimum value in a dictionary.
     This example finds the student with the lowest grade, the alphabetically smallest name,
     and the shortest name by length.

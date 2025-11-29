@@ -16,6 +16,8 @@ def main():
             print("Invalid input. Please enter a valid integer.")
 
     # Calculate average grades above the threshold
+    # Using dictionary comprehension to get values from dictionary using iteration with filtering
+    # In detail, give me the rounded average of each student's grades if student has grades & the average is greater than the threshold. 
     average_grades = {
         student: round(sum(grades) / len(grades), 2)
         for student, grades in students.items()

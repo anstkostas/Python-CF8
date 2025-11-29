@@ -2,14 +2,14 @@ def main():
     """
     Main function to demonstrate tuple properties and mutability of its elements.
     """
-    # Creating a tuple
+    # Creating a tuple, parenthesis are infered.
     g = 1, 2, 3, 5
 
     # Printing the type of g to show that it is a tuple
     print("Type of g:", type(g))  # Output: <class 'tuple'>
 
     # Tuple mutability test
-    # Tuples are unmodifiable, but if they contain mutable elements, those elements can be changed.
+    # Tuples are unmodifiable, but if they contain mutable elements, those elements can be changed bc the reference of this mutable element remains the same.
     my_tuple = (1, 2, [3, "CF"], "Hello")
 
     # Attempt to change an unmodifiable element of the tuple (this will raise an error)

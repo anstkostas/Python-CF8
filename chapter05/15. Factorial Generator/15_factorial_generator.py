@@ -1,3 +1,4 @@
+# The difference from iterator, is that I dont know in advance the number of iterations. Whenever the generator is called, the next() method is called and the next value is calculated. The generator haults its execution and remembers its state.
 def facto():
     """
     Generator function to yield factorials indefinitely.

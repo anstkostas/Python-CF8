@@ -3,7 +3,7 @@ def upscale_grades(students_grades):
     Upscale grades by adding 1 to each grade less than or equal to 9.
     Grades of 10 remain the same.
     """
-    # Using dictionary comprehension
+    # Using dictionary comprehension, return a dictionary with a set "name" key and a calculated value(what's inside the parenthesis).
     return {name: (grade + 1 if grade <= 9 else grade) for name, grade in students_grades.items()}
 
 def filter_passed(students_grades):

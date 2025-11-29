@@ -1,3 +1,4 @@
+# This module is the 1st improvement of logic of 11_transform_filter_grades.py
 def upscale_grades(grades):
     """
     Upscale grades by adding 1 to each grade less than or equal to 9.
@@ -55,7 +56,7 @@ def main():
 
     # Calculating average grade
     average_grade = calculate_average(grades)
-    print(f"Average grade: {average_grade:.2f}")
+    print(f"Average grade: {average_grade:.2f}")  # :.2f -> with 2 decimals
 
 if __name__ == "__main__":
     main()

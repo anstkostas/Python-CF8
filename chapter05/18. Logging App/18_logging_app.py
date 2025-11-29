@@ -5,7 +5,7 @@ def main():
 
     # Create a file handler for logging to a file
     # So, we use this approach to redirect the error from our console to the logging file.
-    file_handler = logging.FileHandler(log_file, mode='a')
+    file_handler = logging.FileHandler(log_file, mode='a')  # mode="a" append
 
     # Create a list of handlers for the logger
     handlers = [file_handler]

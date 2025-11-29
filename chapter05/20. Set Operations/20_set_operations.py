@@ -1,6 +1,8 @@
 def main():
     """
     Demonstrates set operations.
+    In these methods the original sets remain unchanged. New sets are created to hold the results.
+    BUT, in each of these operations there is the _update method that changes the original set.
     """
     # Define two sets of products available in two different stores
     store_a_products = {"Apples", "Bananas", "Cherries", "Dates", "Watermelons"}
@@ -13,7 +15,7 @@ def main():
     common_products = store_a_products.intersection(store_b_products)
     print("Products available in both Store A and Store B:", common_products)
 
-    # Find all unique products (union) across both stores
+    # Find all unique products (union) across both stores(all products but only once or A+B - A∩B)
     all_products = store_a_products | store_b_products
     print("All unique products across Store A and Store B:", all_products)
     # Alternatively, using the union method

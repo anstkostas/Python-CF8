@@ -22,9 +22,10 @@ def main():
         return
 
     # Create sales dictionary
-    monthly_sales = dict(zip(months, sales))
-    print("Monthly Sales (in thousands):\n", monthly_sales)
-
+    monthly_sales = dict(zip(months, sales)) 
+    print("Monthly Sales (in thousands):\n", monthly_sales) # Monthly Sales (in thousands): {'January': 12000, 'February': 14500, ...}
+    # If one list is longer, the extra elements are ignored.
+    
     print("\n-------------------")
     print("Detailed Monthly Sales:")
     for month, value in monthly_sales.items():

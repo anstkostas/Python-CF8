@@ -2,31 +2,32 @@ class SimpleIterator:
     def __init__(self, data):
         """
         Initialize the iterator with the given data.
+        To create an iterator I must implement 2 magic methods(__iter__, __next__).
 
         Parameters:
-        data (list): The list of elements to iterate over.
+          data (list): The list of elements to iterate over.
         """
         self.data = data
-        self.index = 0
+        self.index = 0  # index of iterator
 
-    def __iter__(self):
+    def __iter__(self): # magic method
         """
         Return the iterator object itself.
 
         Returns:
-        self (SimpleIterator): The iterator object itself.
+          self (SimpleIterator): The iterator object itself.
         """
         return self
 
-    def __next__(self):
+    def __next__(self): # magic method
         """
         Return the next item from the data. Raise StopIteration when the data is exhausted.
 
         Returns:
-        int/float/str: The next item from the data.
+          int/float/str: The next item from the data.
 
         Raises:
-        StopIteration: When there are no more items to return.
+          StopIteration: When there are no more items to return.
         """
         if self.index < len(self.data):
             result = self.data[self.index]

@@ -1,10 +1,15 @@
 def memoize(func):
     """
     A simple memoization decorator to cache results of the function.
+    A fibonacci sequence calculates the nth number based on the fibonacci value of n - 1 & n - 2.
+    To prevent it for calculating again & again the same values since the fibonacci function is 
+    called many times(recursively), all values if first time calculated are stored in memory
+    (a cache set value in this case) so that it wont have to calculate them again.
     """
     cache = {}
     
     def wrapper(n):
+        # The use of nonlocal is optional since its a mutable variable. NOTE functions cannot modify immutable variables of parent scope without the use of nonlocal keyword.
         if n in cache:
             print(f"Cache hit for Fibonacci({n})")
         else:

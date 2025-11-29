@@ -10,6 +10,7 @@ def get_time(n):
     Returns:
     int: The sum of the first n natural numbers.
     """
+    # start_time = time.time() # Another way to get the time.
     # time.perf_counter() for high-resolution timing, especially useful for short computations.
     start_time = time.perf_counter() # .time()  # Record the start time
     # Perform the calculation: sum of the first n natural numbers
