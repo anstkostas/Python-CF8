@@ -26,6 +26,9 @@ This repository contains advanced Python scripts that demonstrate various machin
   <tr>
     <td>05. <a href="https://github.com/pmoschos/python-CF8/tree/main/chapter09/05.%20MNIST%20Dataset" title="Convolutional Neural Network for MNIST digit classification.">MNIST CNN Classification</a></td>
   </tr>
+  <tr>
+	<td>06. <a href="https://github.com/pmoschos/Python-CF8/tree/main/chapter09/06.%20Credit%20Fraud%20Detexction" title="Credit Card Fraud Detection - Learn and Apply">Credit Card Fraud Detection</a></td>
+  </tr>
 </table>
 
 
