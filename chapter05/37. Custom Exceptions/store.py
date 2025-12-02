@@ -64,7 +64,7 @@ class Inventory:
         """
         Initializes the inventory with an empty list of items.
         """
-        self.items = []
+        self.items = [] # or use list()
     
     def add_item(self, item):
         """
@@ -79,12 +79,13 @@ class Inventory:
                 return
         self.items.append(item)
     
-    def remove_item(self, item_name_to_remove):
+    def remove_item(self, item_name_to_remove, quantity=1):
         """
         Removes an item from the inventory. If the item is not found or out of stock, raises an error.
         
         Parameters:
             item_name_to_remove (str): The name of the item to remove.
+            quantity (int): The quantity of the item to remove. Default is 1.
         
         Returns:
             Item: The item with updated quantity after removal.
@@ -100,8 +101,8 @@ class Inventory:
         # Find the item and update its quantity
         for item in self.items:
             if item == Item(item_name_to_remove, None):
-                if item.quantity > 0:
-                    item.quantity -= 1
+                if item.quantity > quantity:
+                    item.quantity -= quantity
                     return Item(item.name, item.quantity)
                 else:
                     raise OutOfStockError(item.name)

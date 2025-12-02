@@ -5,27 +5,29 @@ def read_file(file_path):
     Reads and prints the content of a file along with additional details.
 
     Parameters:
-    file_path (str): The path to the file to be read.
+      file_path (str): The path to the file to be read.
     """
     if not os.path.isfile(file_path):
         print(f"Error: File '{file_path}' does not exist or is not a valid file.")
-        return
+        return  # None is inferred
     
     try:
-        with open(file_path, 'r') as f:
+        # open with resources
+        with open(file_path, 'r') as f: # f is an alias for the file object
             # Displaying file metadata
             print("Filename:", f.name)
             print("Closed:", f.closed)
-            print("Opening mode:", f.mode)
+            print("Opening mode:", f.mode)  # 'r' specified above declares read mode
             
             # Reading and printing file contents
             contents = f.read()
             print("Contents:", contents)
     except FileNotFoundError:
         print(f"Error: File '{file_path}' not found.")
-    except IOError as e:
+    except IOError as e:  # Input Output error
         print(f"Error reading file '{file_path}': {e}")
     
+    # The with-block automatically closes the file
     # Confirm that the file is closed
     print("File closed after with-block:", f.closed)
 
@@ -34,17 +36,17 @@ def read_file_contents(file_path):
     Reads the content of a file and returns it.
 
     Parameters:
-    file_path (str): The path to the file to be read.
+      file_path (str): The path to the file to be read.
 
     Returns:
-    str: The content of the file.
+      str: The content of the file.
     """
     if not os.path.isfile(file_path):
         print(f"Error: File '{file_path}' does not exist or is not a valid file.")
         return None
 
     try:
-        with open(file_path, 'r') as f:
+        with open(file_path, 'r') as f: # 'r' specifies read mode
             return f.read()
     except FileNotFoundError:
         print(f"Error: File '{file_path}' not found.")
@@ -57,11 +59,11 @@ def create_file(file_path, content):
     Creates a new file with the given content.
 
     Parameters:
-    file_path (str): The path to the file to be created.
-    content (str): The content to write to the file.
+      file_path (str): The path to the file to be created.
+      content (str): The content to write to the file.
     """
     try:
-        with open(file_path, 'w') as f:
+        with open(file_path, 'w') as f: # 'w' specifies write mode
             f.write(content)
             print(f"File '{file_path}' created successfully with content.")
     except IOError as e:
@@ -72,15 +74,15 @@ def update_file(file_path, content):
     Updates the content of an existing file by appending new content.
 
     Parameters:
-    file_path (str): The path to the file to be updated.
-    content (str): The content to append to the file.
+      file_path (str): The path to the file to be updated.
+      content (str): The content to append to the file.
     """
     if not os.path.isfile(file_path):
         print(f"Error: File '{file_path}' does not exist or is not a valid file.")
         return
 
     try:
-        with open(file_path, 'a') as f:
+        with open(file_path, 'a') as f: # 'a' specifies append mode
             f.write(content)
             print(f"File '{file_path}' updated successfully with new content.")
     except IOError as e:
@@ -91,7 +93,7 @@ def delete_file(file_path):
     Deletes the specified file.
 
     Parameters:
-    file_path (str): The path to the file to be deleted.
+      file_path (str): The path to the file to be deleted.
     """
     if not os.path.isfile(file_path):
         print(f"Error: File '{file_path}' does not exist or is not a valid file.")
@@ -109,7 +111,7 @@ def main():
     """
     # Creating a new file
     print("Creating 'example.txt':")
-    create_file('example.txt', "This is the initial content of the file.\n")
+    create_file('example.txt', "This is the initial content of the file.\n")  # If file exists, it will be overwritten
     print()
 
     # Reading and printing details and contents of the created file

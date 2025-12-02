@@ -13,11 +13,13 @@ class Bicycle(Vehicle):
 
 # A class that does not extend Vehicle but has a drive method
 # The behavior of a class in Python is more important than the type of the instance.
+# This is known as "duck typing". Python doesn't care about inheritance as long as the required methods are present.
 class Hoverboard:
     def drive(self):
         print("Hovering on a hoverboard")
 
-# A class that extends Vehicle but does not implement the drive method
+# A class that extends Vehicle but does not implement the drive method can't use drive method despite being a Vehicle.
+# View that in comparison to Hoverboard.
 class Boat(Vehicle):
     def sail(self):
         print("Sailing a boat")

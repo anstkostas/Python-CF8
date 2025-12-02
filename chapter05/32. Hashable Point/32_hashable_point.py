@@ -1,3 +1,6 @@
+# Why objects are hashable, and how to influence it.
+# Without __eq__ & __hash__ python by default to compare two instances of the class checks their ids(which as assigned automaticaly) which differ even if they have the same x, y values. Therefor they are hashable(unique) and can be added as keys to a dictionary. By overloading the __eq__ I tell Python to compare based on the fields therefor now they are not hashable(python raises: TypeError: unhashable type: Point) and must override the __hash__ as well to hash each instance. BUT if two instance have the same field values they are equal(overrided equals(__eq__)) therefor have they are assigned the same hash value.
+
 # Define the Point class
 class Point:
     def __init__(self, x, y):
@@ -9,6 +12,7 @@ class Point:
         Check if two Point instances are equal.
         Equality is based on x and y coordinates.
         """
+        # How is this calculated? The and checks the left-hand side if true then moves to the next.
         return isinstance(other, Point) and self._x == other._x and self._y == other._y
 
     def __hash__(self):
@@ -31,7 +35,7 @@ def main():
     p2 = Point(3, 4)
     p3 = Point(1, 2)  # Same coordinates as p1
 
-    # Demonstrate equality and hash behavior
+    # Demonstrate equality and hash behavior, which is gets p1, then p2 and then for p3 updates value of p1 with p3.
     print("Comparing Points:")
     print(f"p1 == p3: {p1 == p3}")  # True, since they have the same coordinates
     print(f"p1 == p2: {p1 == p2}")  # False, since coordinates differ

@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+# Relative classes is recommended to be placed in the same directory.
 class AbstractStudentDAO(ABC):
     """Defines the Student DAO API"""
 
@@ -7,7 +8,11 @@ class AbstractStudentDAO(ABC):
     def insert(self, student):
         """Insert a new student"""
         raise NotImplementedError()
-        ## or pass...
+
+    # Another way DAOs are implemented is:
+    # @abstractmethod
+    # def insert(self, student):
+    #     pass
     
     @abstractmethod
     def update(self, student_id, student):
@@ -24,9 +29,10 @@ class AbstractStudentDAO(ABC):
         """Get a student by ID"""
         raise NotImplementedError()
 
+# class StudentImpl inherits AbstractStudentDAO
 class StudentImpl(AbstractStudentDAO):
     def __init__(self):
-        self.students = {}
+        self.students = {}  # uses a dictionary
 
     def insert(self, student):
         student_id = student['id']
@@ -34,7 +40,7 @@ class StudentImpl(AbstractStudentDAO):
         print(f"Inserted student with ID: {student_id}")
 
     def update(self, student_id, student):
-        if student_id in self.students:
+        if student_id in self.students: # looks in self.students.keys()
             self.students[student_id] = student
             print(f"Updated student with ID: {student_id}")
         else:
@@ -64,7 +70,7 @@ class ABCInventory(ABC):
 
 class Inventory(ABCInventory):
     def __init__(self):
-        self.items = []
+        self.items = [] # uses a list
 
     def add_item(self, item):
         """Add an item to the inventory"""
@@ -73,10 +79,10 @@ class Inventory(ABCInventory):
 
     def remove_item(self, item_name_to_remove):
         """Remove an item from the inventory by name"""
-        for item in self.items:
+        for item in self.items: # or use a more concise version with if inside for statement.
             if item.name == item_name_to_remove:
                 self.items.remove(item)
-                print(f"Removed item: {item_name_to_remove}")
+                print(f"Removed item: {item_name_to_remove}") # or use item. would return its name since .toString() is overloaded
                 return
         print(f"Item not found: {item_name_to_remove}")
 
@@ -84,7 +90,7 @@ class Item:
     def __init__(self, name):
             self.name = name
         
-    def __str__(self):
+    def __str__(self):  # overloads .toString()
             return self.name
 
 # Example usage

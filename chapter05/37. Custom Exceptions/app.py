@@ -1,4 +1,4 @@
-from store import * # Inventory, Item, OutOfStockError
+from store import * # or import Inventory, Item, OutOfStockError
 
 def main():
     """
@@ -17,7 +17,9 @@ def main():
     inventory.print_items()
     
     # Remove an item from inventory
-    print("\nRemoving an Apple...")
+    print("\nRemoving Apples...")
+    inventory.remove_item("Apple", 10)
+    # inventory.remove_item("Apple", 100) # This should raise OutOfStockError
     inventory.remove_item("Apple")
     inventory.print_items()
     
@@ -30,7 +32,8 @@ def main():
     # Try to remove more items than available
     try:
         for _ in range(20):
-            inventory.remove_item("Banana")
+            removed_item = inventory.remove_item("Banana")
+            print(f"Removed a Banana, current stock: {removed_item.quantity}")
     except OutOfStockError as e:
         print(e)
 
